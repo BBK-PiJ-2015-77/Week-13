@@ -1,7 +1,13 @@
 public class BookImpl implements Book {
 	
-	private String author;
-	private String title;
+	/**
+	 *	An implementation of a book, a data structure that contains
+	 *	the author and title information.
+	 *
+	 */
+	
+	private final String author;
+	private final String title;
 	
 	public BookImpl(String author, String title) {
 		this.author = author;
@@ -9,11 +15,11 @@ public class BookImpl implements Book {
 	}
 	
 	public String getAuthor() {
-		return null;
+		return this.author;
 	}
 	
 	public String getTitle() {
-		return null;
+		return this.title;
 	}
 	
 }
