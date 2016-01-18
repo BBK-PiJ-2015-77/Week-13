@@ -1,18 +1,24 @@
 import org.junit.*;
+import org.junit.Before;
 import static org.junit.Assert.*;
 
 public class BookImplTest{
-
-	@Test
-	public void testsGetAuthor() {
-		String inputA = "Joe Bloggs";
-		String inputT = "";
-		Book b = new BookImpl(inputA,inputT);
-		String output = b.getAuthor();
-		String expected = "Joe Bloggs";
-		assertEquals(output, expected);
+	private Book bk;
+	
+	@Before
+	public void setup() {
+		bk = new BookImpl("Joe Bloggs","Harry Potter");
 	}
 	
+	@Test
+	public void testsGetAuthor() {
+		assertEquals("Joe Bloggs", bk.getAuthor());
+	}
+	
+	@Test
+	public void testsGetTitle() {
+		assertEquals("Harry Potter", bk.getTitle());
+	}
 	
 	
 }
